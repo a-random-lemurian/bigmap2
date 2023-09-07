@@ -1,5 +1,7 @@
 # BigMap 2
 
+This is a Lemurian fork of BigMap 2, built for members of the [OpenGeofiction](http://opengeofiction.net) website, a community of hobbyists building a fictional planet with OSM technology.
+
 This is a successor to [BigMap](http://wiki.openstreetmap.org/wiki/Bigmap) script: a tool to
 stitch map tiles and produce a PNG image. Among improvements are:
 
@@ -12,7 +14,15 @@ stitch map tiles and produce a PNG image. Among improvements are:
 * Server-side stitching with a queue.
 
 ## Installation
+### Docker
+```
+make docker_img
+make run_img
+```
 
+then go to http://localhost:2410
+
+### The other method
 The following directory structure is recommended:
 
 | Path | Mode | Description
@@ -41,3 +51,5 @@ in `scripts/tiles2html.pl` and run it.
 
 All scripts were written by Ilya Zverev, partly based on public domain code by Frederik Ramm.
 Published under WTFPL license.
+
+And then it was modified by Lemuria, who published it under the same license as the original.
