@@ -55,7 +55,7 @@ function get_layers($tiles, $zoom) {
 	global $attribution, $attrib_plain;
 	$needed = explode('|', $tiles);
 	$result = array();
-	$attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>';
+	$attribution = 'Map data &copy; <a href="http://opengeofiction.net">OpenGeofiction</a>';
 	$file = @fopen('tiles.txt', 'r');
 	if( $file ) {
 		while( ($line = fgets($file)) !== false ) {
@@ -71,7 +71,7 @@ function get_layers($tiles, $zoom) {
 		fclose($file);
 	}
 	if( !count($result) )
-		$result[] = 'http://tile.openstreetmap.org/!z/!x/!y.png';
+		$result[] = 'http://tile.opengeofiction.net/ogf-carto/!z/!x/!y.png';
 	$attrib_plain = str_replace('&copy;', '(c)', preg_replace('/<[^>]+>/', '', $attribution));
 	return $result;
 }
