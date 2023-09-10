@@ -1,2 +1,5 @@
 queue/
 result/
+venv/
+map*.png
+.vscode
